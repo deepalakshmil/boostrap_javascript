@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Registration Form</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+
+    <!-- Added for Date Picker Starts-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.14/js/gijgo.min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gijgo@1.9.14/css/gijgo.min.css">
+    <!-- Added for Date Picker End-->
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body onload="loadState()">
+    <header>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <!-- Navigation Bar logo to link the all the pages -->
+                <div class="navbar-brand"><a href="index.html"><img src="/assests/images/imagelogo.jpg"
+                            alt="log-eventcenter"></a></div>
+                <!-- Button for using class to display the hamburger menu , and using the span this will be the diplay the hamburger icon -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navigation link class using the navigation to the all the pages -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="orderitem.html">Order Item</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sign-in.html">Sign in</a></li>
+                        <li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <!-- This section open the container to diplay the registraion form on this website -->
+        <div class="container mt-5 pt-5">
+            <!-- User Registration Form using the form alignment-->
+            <h2 class="text-center mt-5 p-4 mb-4">Registration Form</h2>
+            <form name="registrationform" class="border p-4 shadow-smt">
+                <!-- This section open the Grid system structuring usig row wise to diplay the registraion form on this website -->
+                <div class="row">
+                    <!-- Each row contains label and input box that's validation form javascript. so That's came automatically validataion in the registraion form on this website -->
+                    <div class="row">
+                        <div class="col-12 col-md-11 col-lg-9 col-xl-7 col-xxl-4">
+                            <label for="firstname" class="form-label">First name</label>
+                            <input type="text" id="firstname" class="form-control is-invalid" placeholder="Full Name"
+                                required>
+                            <div class="invalid-feedback">
+                                First Name is required.
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-11 col-lg-9 col-xl-7 col-xxl-4">
+                            <label for="lastname" class="form-label">Last name</label>
+                            <input type="text" id="lastname" class="form-control is-invalid" placeholder="Last Name"
+                                required>
+                            <div class="invalid-feedback">
+                                Last Name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-11 col-lg-9 col-xl-7 col-xxl-4">
+                            <label for="username" class="form-label">User Name</label>
+                            <input type="text" id="username" class="form-control is-invalid" placeholder="User Name"
+                                onblur="userNameValidation(document.registrationform.username.value)" required>
+                            <div class="invalid-feedback">
+                                Username is required.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <label for="validateEmailID" class="form-label">E-mail</label>
+                            <input type="text" class="form-control is-invalid" id="validateEmailID" placeholder="E-Mail"
+                                onblur="isValidEmaiId(document.registrationform.validateEmailID.value)" required>
+                            <div class="invalid-feedback">
+                                E-mail is required.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-11 col-lg-9 col-xl-7 col-xxl-4">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" id="password" class="form-control is-invalid" placeholder="Password"
+                                onblur="validatePassword(document.registrationform.password.value)" required>
+                            <div class="invalid-feedback">
+                                Password is required.
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-11 col-lg-9 col-xl-7 col-xxl-4">
+                            <label for="retypepassword" class="form-label">Re-Type Password</label>
+                            <input type="password" id="retypepassword" class="form-control is-invalid"
+                                placeholder="Re Type Password"
+                                onblur="validateRetypePassword(document.registrationform.retypepassword.value)"
+                                required>
+                            <div class="invalid-feedback">
+                                Password is required.
+                            </div>
+                        </div>
+                        <!-- Datepicker fuction use in javascript so that date came in automatically in this form so picked  easily date from this input fileds-->
+                        <div class="col-12 col-md-11 col-lg-9 col-xl-7 col-xxl-4">
+                            <label for="datepicker" class="form-label" placeholder="MM/DD/YYYY">Date Of Birth</label>
+                            <input id="datepicker" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <label for="validationDefault03" class="form-label">Address Line</label>
+                        <input type="text" class="form-control is-invalid" id="validationDefault03" required>
+                        <div class="invalid-feedback">
+                            Address is required.
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-11 col-lg-9 col-xl-7 col-xxl-4">
+                        <label for="validationCity" class="form-label">City</label>
+                        <input type="text" class="form-control" id="validationCity"
+                            onblur="validateCityName(document.registrationform.validationCity.value)" required>
+                    </div>
+                    <!--Using the javascript function This method list down states for the select component when page gets loaded , so that Drop down box automatically fill in when the page loaded that came in automatically in this input fileds-->
+                    <div class="col-12 col-md-11 col-lg-9 col-xl-7 col-xxl-4">
+                        <label for="statesSelect" class="form-label">State</label>
+                        <select class="form-select" id="statesSelect" required></select>
+                    </div>
+                    <div class="col-12 col-md-11 col-lg-9 col-xl-7 col-xxl-4">
+                        <label for="validationZipCode" class="form-label">Zip</label>
+                        <input type="number" class="form-control" id="validationZipCode"
+                            onblur="validateZipNumber(document.registrationform.validationZipCode.value)" required>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                        <label class="form-check-label" for="invalidCheck2">
+                            Agree to terms and conditions
+                        </label>
+                    </div>
+                </div>
+                <div class="text-center col-12">
+                    <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+                    <button type="cancel" value="cancel" class="btn btn-primary">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!-- place footer here -->
+    <footer>
+        <p class="text-center mt-5">&copy; 2025 yashi'Bakery Bake Me A Cake. All Rights Reserved<br></p>
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>

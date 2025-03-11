@@ -1,0 +1,42 @@
+body{
+    font-family: monospace;
+    background-color: rgb(82, 53, 53);
+    color:rgb(243, 235, 235); 
+}
+/* Basic styling for the navigation bar */
+nav a:hover{
+    text-transform: uppercase;
+    background-color: rgb(205, 25, 25);
+}
+nav{
+    background-color: rgb(171, 187, 171);
+}
+.navbar-brand img
+{
+   width: 50%;
+}
+/* Basic styling for the hero image  */
+.hero-image {
+    background-image: linear-gradient(rgba(226, 213, 213, 0.397), rgba(230, 219, 219, 0.418)), url("../assests/images/hero1.webp");
+    background-position: center center;
+    background-size: cover;
+     position: relative;
+    height: 70vh; 
+}
+.input-group-append {
+    cursor: pointer;
+  }
+
+/* Responsive design */
+/* Media query for smaller screens */
+@media (max-width: 575.98px) { 
+ 
+      /* Styles for screens smaller than 575.98px */
+    body{
+        background-color: rgb(26, 66, 66);
+    }
+ }
+
+
+
+
