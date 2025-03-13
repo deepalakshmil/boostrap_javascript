@@ -1,6 +1,6 @@
 // This method list down states for the select component when page gets loaded 
-function loadState() {
 
+function loadState() {
   const usStatesArray = [{ value: "None", text: "Select State..." },{ value: "AL", text: "Alabama" },{ value: "AK", text: "Alaska" },{ value: "AZ", text: "Arizona" },{ value: "AR", text: "Arkansas" },{ value: "CA", text: "California" },{ value: "CO", text: "Colorado" },{ value: "CT", text: "Connecticut" },{ value: "DC", text: "District of Columbia" },{ value: "DE", text: "Delaware" },{ value: "FL", text: "Florida" },{ value: "GA", text: "Georgia" },{ value: "HI", text: "Hawaii" },{ value: "ID", text: "Idaho" },{ value: "IL", text: "Illinois" },{ value: "IN", text: "Indiana" },{ value: "IA", text: "Iowa" },{ value: "KS", text: "Kansas" },{ value: "KY", text: "Kentucky" },{ value: "LA", text: "Louisiana" },{ value: "ME", text: "Maine" },{ value: "MD", text: "Maryland" },{ value: "MA", text: "Massachusetts" },{ value: "MI", text: "Michigan" },{ value: "MN", text: "Minnesota" },{ value: "MS", text: "Mississippi" },{ value: "MO", text: "Missouri" },{ value: "MT", text: "Montana" },{ value: "NE", text: "Nebraska" },{ value: "NV", text: "Nevada" },{ value: "NH", text: "New Hampshire" },{ value: "NJ", text: "New Jersey" },{ value: "NM", text: "New Mexico" },{ value: "NY", text: "New York" },{ value: "NC", text: "North Carolina" },{ value: "ND", text: "North Dakota" },{ value: "OH", text: "Ohio" },{ value: "OK", text: "Oklahoma" },{ value: "OR", text: "Oregon" },{ value: "PA", text: "Pennsylvania" },{ value: "RI", text: "Rhode Island" },{ value: "SC", text: "South Carolina" },{ value: "SD", text: "South Dakota" },{ value: "TN", text: "Tennessee" },{ value: "TX", text: "Texas" },{ value: "UT", text: "Utah" },{ value: "VT", text: "Vermont" },{ value: "VA", text: "Virginia" },{ value: "WA", text: "Washington" },{ value: "WV", text: "West Virginia" },{ value: "WI", text: "Wisconsin" },{ value: "WY", text: "Wyoming"}];
   const selectStateElement = document.getElementById("statesSelect");
   usStatesArray.forEach(state => {
@@ -95,10 +95,10 @@ function isValidEmaiId(emailValue) {
   }
   let regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   if (!regex.test(emailValue)) {
-    console.log("Invalid Email address");
-    alert("Invalid Email address");
+    console.log("Invalid Email address must include @  .");
+    alert("Invalid Email address email must include @ . ");
   }
-}
+} 
 
 // when the click sumbit botton this function called
 function sumbitSignIn() {
