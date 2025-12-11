@@ -1,20 +1,83 @@
-#  Yashi's Bakery Bake Me A Cake webpage
+# Yashi's Bakery – Bake Me A Cake Webpage
 
-This the Yashi's Bakery Bake Me A Cake webpage Webpage Project built Design on HTML , CSS and  the BOOSTRAP framework and function and the validation on javascript.
- 
- * Follow the below steps to access the webpage.
-* For run the webpage. First start the server and open the webpage.
+This is the Yashi's Bakery – Bake Me A Cake webpage project built using HTML, CSS, Bootstrap, and JavaScript (for functions and form validation).
 
-* The individual pages are index.html, about.html, contactus.html, orderitem, registration form , sing-in  and to view the images.
+How to Run the Project
 
-1. index.html - It is the Yashi's Bakery Bake Me A Cake home page. The modules made with a lot of tags and it includes Navigation,  logo to display the image to like in all the webpages.  weclome to our webpage and Hero image adding,sections, about us this website. This section carousel use for the displaying slide show images. To Navigation to all webpage in this index page.
+- Follow the steps below to access the webpage.
 
-2. about.html - It contains are the information about the Yashi's Bakery Bake Me A Cake-webpage. 
+- To run the webpage, start the server and open the project in your browser.
 
-3. order-item.html - It Contains are in this section open the Card to diplay the card infromation for cake, icecream, cupcake to select and order to place the card this this website. This section open the container to diplay the product details infromation like us category, size and price to display the table format using the bootstrap classes.
+Project Structure
 
-4. contact-us.html - It contains are the get the Contact details and know the Yashi's Bakery Bake Me A Cake-webpage. It contains are the contact information To find the Yashi's Bakery Bake Me A Cake-webpage location so using this Google map. To find the User-Information-webpage location so using this Google map . This is the User-Information-webpage address, contact and  website address information.
+- The individual pages included in this project are: index.html, about.html, contactus.html, orderitem, registration form , sing-in and Each page uses images, Bootstrap components, and JavaScript validations.
 
-5. sign-in.html - It contains the webpage login the user to type the valid username and password. This button When click the button access to javascript function calles to the display the success message.
+1. index.html
 
-6. registration.html - It contains the webpage for user fill up the registration form. This section open the container to diplay the registraion form on this website. User Registration Form using the form alignment. This section open the Grid system structuring usig row wise to diplay the registraion form on this website. Each row contains label and input box that's validation form javascript. so That's came automatically validataion in the registraion form on this website. This method list down states for the select component when page gets loaded. 
+This is the Home Page of Yashi's Bakery – Bake Me A Cake.
+It includes:
+
+- Navigation bar and logo (displayed consistently across all pages)
+
+- Hero image section
+
+- “Welcome” message and “About Us” introduction
+
+- Carousel slideshow for displaying images
+
+- Links to navigate to all other pages
+
+This page is designed using semantic HTML structure.
+
+2. about.html
+
+This page contains information about Yashi's Bakery – Bake Me A Cake, including details describing the purpose of the website and bakery background.
+
+3. order-item.html
+
+This page allows users to:
+
+- View product cards such as cake, ice cream, and cupcakes
+
+- Select items and place an order
+
+- View product details like category, size, and price displayed in table format using Bootstrap classes
+
+A Bootstrap container is used to align content clearly and responsively.
+
+4. contact-us.html
+
+This page contains:
+
+Contact details of Yashi’s Bakery
+
+Bakery location shown using an embedded Google Map
+
+Address, phone number, email, and website information
+
+This page helps users find real-world bakery contact information.
+
+5. sign-in.html
+
+This page allows the user to log in by entering a valid username and password.
+When the "Sign In" button is clicked, a JavaScript function is triggered that displays a success message on correct input.
+
+6. registration.html
+
+This page contains the User Registration Form, where visitors can fill out their details. It includes:
+
+- A Bootstrap grid system to structure form fields
+
+- Labels and input boxes arranged row-wise
+
+- JavaScript validation for each field
+
+- Automatic validation messages based on user input
+
+- A dropdown list of states that loads when the page is opened
+
+All form elements are aligned inside a responsive Bootstrap container.
+
+Website Live Preview
+
+🔗 https://yashis-bakery.netlify.app
